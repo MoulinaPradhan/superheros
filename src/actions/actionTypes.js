@@ -1,0 +1,11 @@
+export const ADD_HEROS = "ADD_HEROS";
+export const ADD_FAVOURITE = "ADD_FAVOURITE";
+export const REMOVE_FAVOURITE = "REMOVE_FAVOURITE";
+export const SHOW_FAVOURITES = "SHOW_FAVOURITES";
+export const ADD_HERO_TO_LIST = "ADD_HERO_TO_LIST";
+export const ADD_SEARCH_RESULT = "ADD_SEARCH_RESULT";
+//
+export const FETCH_HERO_ABOUT = " FETCH_HERO_ABOUT";
+export const HERO_SUCCESS = "HERO_SUCCESS";
+export const HERO_FAILURE = "HERO_FAILURE";
+//
