@@ -26,7 +26,7 @@ class Navbar extends React.Component {
           </button>
           {this.props.search.map((search) => {
             return (
-              <div className="search-results" key={search.key}>
+              <div id="search-results" key={search.key}>
                 <div className="search-result">
                   <img src={search.image.url} />
                   <div className="hero-info">

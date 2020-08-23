@@ -14,45 +14,41 @@ const initialHerosState = {
   showFavourites: false,
 };
 export function heros(state = initialHerosState, action) {
-  if (action.type === ADD_HEROS) {
-    return {
-      ...state,
-      list: action.heros,
-    };
-  }
+  switch (action.type) {
+    case ADD_HEROS:
+      return {
+        ...state,
+        list: action.heros,
+      };
 
-  if (action.type === ADD_FAVOURITE) {
-    return {
-      ...state,
-      favourites: [action.hero, ...state.favourites],
-    };
-  }
+    case ADD_FAVOURITE:
+      return {
+        ...state,
+        favourites: [action.hero, ...state.favourites],
+      };
 
-  if (action.type === REMOVE_FAVOURITE) {
-    let filtered = state.favourites.filter((hero) => {
-      return hero.Title !== action.hero.Title;
-    });
-    return {
-      ...state,
-      favourites: filtered,
-    };
-  }
+    case REMOVE_FAVOURITE:
+      let filtered = state.favourites.filter((hero) => {
+        return hero.Title !== action.hero.Title;
+      });
+      return {
+        ...state,
+        favourites: filtered,
+      };
+    case SHOW_FAVOURITES:
+      return {
+        ...state,
+        showFavourites: action.showFavourites,
+      };
 
-  if (action.type === SHOW_FAVOURITES) {
-    return {
-      ...state,
-      showFavourites: action.showFavourites,
-    };
+    case ADD_HERO_TO_LIST:
+      return {
+        ...state,
+        list: [action.hero, ...state.list],
+      };
+    default:
+      return state;
   }
-
-  if (action.type === ADD_HERO_TO_LIST) {
-    return {
-      ...state,
-      list: [action.hero, ...state.list],
-    };
-  }
-
-  return state;
 }
 
 const initialSearchState = {
@@ -61,20 +57,21 @@ const initialSearchState = {
 };
 
 export function search(state = initialSearchState, action) {
-  if (action.type === ADD_SEARCH_RESULT) {
-    return {
-      ...state,
-      result: action.hero,
-      showSearchResults: true,
-    };
+  switch (action.type) {
+    case ADD_SEARCH_RESULT:
+      return {
+        ...state,
+        result: action.hero,
+        showSearchResults: true,
+      };
+    case ADD_HERO_TO_LIST:
+      return {
+        ...state,
+        showSearchResults: false,
+      };
+    default:
+      return state;
   }
-  if (action.type === ADD_HERO_TO_LIST) {
-    return {
-      ...state,
-      showSearchResults: false,
-    };
-  }
-  return state;
 }
 
 export default combineReducers({
