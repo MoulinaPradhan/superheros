@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchHeroAbout } from "../actions/about";
+import { fetchHeroAbout } from "../actions/details";
 
-class About extends React.Component {
+class Details extends React.Component {
   componentDidMount() {
     const { match } = this.props;
 
@@ -14,7 +14,7 @@ class About extends React.Component {
   render() {
     const {
       match: { params },
-      about,
+      details,
     } = this.props;
     const hero = this.props.match.params;
     console.log(this.props);
@@ -30,10 +30,10 @@ class About extends React.Component {
     );
   }
 }
-function mapStateToProps({ about }) {
+function mapStateToProps({ details }) {
   return {
-    about,
+    details,
   };
 }
 
-export default connect(mapStateToProps)(About);
+export default connect(mapStateToProps)(Details);

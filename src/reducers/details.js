@@ -1,4 +1,8 @@
-import { HERO_SUCCESS, HERO_FAILURE, FETCH_HERO_ABOUT } from "../actions/index";
+import {
+  HERO_SUCCESS,
+  HERO_FAILURE,
+  FETCH_HERO_ABOUT,
+} from "../actions/actionTypes";
 
 const initalProfileState = {
   hero: {},

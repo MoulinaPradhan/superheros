@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import Navbar from "./Navbar";
 import Home from "./Home";
-import About from "./About";
+import Details from "./Details";
 
 class App extends React.Component {
   render() {
@@ -13,14 +13,8 @@ class App extends React.Component {
           <Navbar />
 
           <Switch>
-            <Route
-              exact
-              path="/"
-              render={(props) => {
-                return <Home {...props} />;
-              }}
-            />
-            <Route path="/about" component={About} />
+            <Route exact path="/" component={Home} />
+            <Route path="/superhero-details/:id" component={Details} />
           </Switch>
         </div>
       </Router>

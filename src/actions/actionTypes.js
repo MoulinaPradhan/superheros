@@ -8,4 +8,3 @@ export const ADD_SEARCH_RESULT = "ADD_SEARCH_RESULT";
 export const FETCH_HERO_ABOUT = " FETCH_HERO_ABOUT";
 export const HERO_SUCCESS = "HERO_SUCCESS";
 export const HERO_FAILURE = "HERO_FAILURE";
-//

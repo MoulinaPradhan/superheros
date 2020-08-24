@@ -73,10 +73,12 @@ class Home extends React.Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state, "ss");
+  {
+    /* console.log(state, "ss");
   console.log("lis", state.heros);
   console.log("fofo", state.heros.favourites);
-  console.log("st", state.heros.showFavourites);
+console.log("st", state.heros.showFavourites);*/
+  }
   return {
     list: state.heros,
     search: state.search,
