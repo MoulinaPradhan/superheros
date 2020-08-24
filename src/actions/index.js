@@ -5,9 +5,6 @@ import {
   SHOW_FAVOURITES,
   ADD_HERO_TO_LIST,
   ADD_SEARCH_RESULT,
-  FETCH_HERO_ABOUT,
-  HERO_SUCCESS,
-  HERO_FAILURE,
 } from "./actionTypes";
 
 export function addHeros(heros) {

@@ -11,10 +11,9 @@ class App extends React.Component {
       <Router>
         <div>
           <Navbar />
-
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/superhero-details/:id" component={Details} />
+            <Route path="/superhero-details/:heroId" component={Details} />
           </Switch>
         </div>
       </Router>

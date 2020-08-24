@@ -1,28 +1,28 @@
 import {
-  HERO_SUCCESS,
-  HERO_FAILURE,
-  FETCH_HERO_ABOUT,
+  HERO_DETAIL_SUCCESS,
+  HERO_DETAIL_FAILURE,
+  FETCH_HERO_DETAIL,
 } from "../actions/actionTypes";
 
-const initalProfileState = {
+const initalDetailState = {
   hero: {},
   error: null,
   sucess: null,
 };
-export default function profile(state = initalProfileState, action) {
+export default function detail(state = initalDetailState, action) {
   switch (action.type) {
-    case HERO_SUCCESS:
+    case HERO_DETAIL_SUCCESS:
       return {
         ...state,
         sucess: true,
         hero: action.hero,
       };
-    case HERO_FAILURE:
+    case HERO_DETAIL_FAILURE:
       return {
         ...state,
         error: hero.action,
       };
-    case FETCH_HERO_ABOUT:
+    case FETCH_HERO_DETAIL:
       return {
         ...state,
       };

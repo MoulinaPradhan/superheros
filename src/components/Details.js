@@ -14,7 +14,7 @@ class Details extends React.Component {
   render() {
     const {
       match: { params },
-      details,
+      detail,
     } = this.props;
     const hero = this.props.match.params;
     console.log(this.props);
@@ -30,9 +30,9 @@ class Details extends React.Component {
     );
   }
 }
-function mapStateToProps({ details }) {
+function mapStateToProps({ detail }) {
   return {
-    details,
+    detail,
   };
 }
 
